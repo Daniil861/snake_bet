@@ -36,7 +36,7 @@
             el.textContent = sessionStorage.getItem("money");
         }));
     } else {
-        sessionStorage.setItem("money", 1e4);
+        sessionStorage.setItem("money", 1e3);
         if (document.querySelector(".check")) document.querySelectorAll(".check").forEach((el => {
             el.textContent = sessionStorage.getItem("money");
         }));
@@ -95,7 +95,7 @@
     if (document.querySelector(".icon-anim img")) setInterval((() => {
         get_random_animate();
     }), 1e4);
-    if (document.querySelector(".main__body") && document.querySelector(".preloader").classList.contains("_hide")) document.querySelector(".main__body").classList.add("_active");
+    if (document.querySelector(".main") && document.querySelector(".preloader").classList.contains("_hide")) document.querySelector(".main").classList.add("_active");
     function hide_main_show_rules(block) {
         block.classList.add("_active");
         create_chip();
@@ -112,7 +112,9 @@
         chip.setAttribute("alt", `Icon`);
         document.querySelector(".rules__image").append(chip);
     }
+    if (document.querySelector(".game") && document.querySelector(".preloader").classList.contains("_hide")) document.querySelector(".game").classList.add("_active");
     const config = {
+        target: 0,
         program: 1,
         item_left: 0,
         item_top: 0,
@@ -136,11 +138,12 @@
     function start_game() {
         if (+sessionStorage.getItem("money") > +sessionStorage.getItem("current-bet")) {
             add_class_item(".button-balance__body", "_hold");
+            if (0 == config.target) delete_money(+sessionStorage.getItem("current-bet"), ".check");
+            config.target = 1;
             move_cub();
             setTimeout((() => {
                 start_move_chip();
             }), 500);
-            delete_money(+sessionStorage.getItem("current-bet"), ".check");
         } else no_money(".check");
     }
     function move_cub() {
@@ -320,25 +323,25 @@
     function check_change_turn() {
         let block = "";
         if (1 == config.program) block = config; else if (2 == config.program) block = config_bot;
-        if (1 == config.program) if (6 == config.number_cub && false == config.hold || config.hold_enemy) {
+        if (1 == config.program) if (6 == config.number_cub || true == config.hold_enemy) {
             setTimeout((() => {
                 remove_class_item(".button-balance__body", "_hold");
             }), 2e3);
             if (config.hold_enemy) config.hold_enemy = false;
             return false;
-        } else if (6 == config.number_cub && block.hold) setTimeout((() => {
+        } else if (6 == config.number_cub && true == block.hold) setTimeout((() => {
             remove_class_item(".button-balance__body", "_hold");
             change_move_bot();
         }), 2e3); else setTimeout((() => {
             remove_class_item(".button-balance__body", "_hold");
             change_move_bot();
-        }), 2e3); else if (2 == config.program) if (6 == config.number_cub && false == config.hold || config_bot.hold_enemy) setTimeout((() => {
+        }), 2e3); else if (2 == config.program) if (6 == config.number_cub || true == config_bot.hold_enemy) setTimeout((() => {
             move_cub();
             setTimeout((() => {
                 start_move_chip();
             }), 500);
             if (config_bot.hold_enemy) config_bot.hold_enemy = false;
-        }), 1e3); else if (6 == config_bot.number_cub && config_bot.hold) setTimeout((() => {
+        }), 1e3); else if (6 == config_bot.number_cub && true == config_bot.hold) setTimeout((() => {
             change_move_player();
         }), 1e3); else setTimeout((() => {
             change_move_player();
@@ -392,10 +395,11 @@
         config_bot.current_number_dot = 1;
         config_bot.current_position_dot = 1;
         config.current_bonus = 0;
-        document.querySelector(".field__chip_green").style.left = "72px";
-        document.querySelector(".field__chip_green").style.bottom = "20px";
-        document.querySelector(".field__chip_blue").style.left = "52px";
-        document.querySelector(".field__chip_blue").style.bottom = "20px";
+        config.target = 0;
+        config.program = 2;
+        jump_chip(1);
+        config.program = 1;
+        jump_chip(1);
         if (document.querySelector(".win").classList.contains("_active")) document.querySelector(".win").classList.remove("_active"); else document.querySelector(".loose").classList.remove("_active");
     }
     document.addEventListener("click", (e => {
@@ -404,7 +408,7 @@
             sessionStorage.setItem("preloader", true);
             preloader.classList.add("_hide");
             wrapper.classList.add("_visible");
-            if (document.querySelector(".main__body") && document.querySelector(".preloader").classList.contains("_hide")) document.querySelector(".main__body").classList.add("_active");
+            if (document.querySelector(".main") && document.querySelector(".preloader").classList.contains("_hide")) document.querySelector(".main").classList.add("_active");
         }
         if (targetElement.closest(".block-bet__minus")) {
             let current_bet = +sessionStorage.getItem("current-bet");
