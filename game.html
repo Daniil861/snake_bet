@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Snake Bet - game</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220514122849">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+</head>
+
+<body>
+	<div class="preloader">
+		<div class="preloader__acces acces-preloader">
+			<div class="acces-preloader__text text-pre">
+				This Privacy Policy for Snake Bet has been compiled to better serve those who are concerned with how their
+				'Personally Identifiable Information' (PII) is being used online. PII, as described in privacy law and
+				information security, is information that can be used on its own or with other information to identify,
+				contact, or locate a single person, or to identify an individual in context. Please read Privacy Policy
+				Snake Bet carefully to get a clear understanding of how we collect, use, protect or otherwise handle your
+				Personally Identifiable Information. <br>
+				What personal information do we collect from the people that visit Snake Bet? <br>
+				When ordering or registering on our app, as appropriate, you may be asked to enter your phone number or
+				other details to help you with your experience. <br>
+				When do we collect information? <br>
+				We collect information from you when you are installing the application. <br>
+				Data you provide us. <br>
+			</div>
+			<div class="acces-preloader__text text-pre">
+				Contact information (such as name and email address) <br>
+				Player name <br>
+				Your messages to the Service (such as chat logs and player support tickets) <br>
+				Other data you choose to give us (such as data to identify a lost account) <br>
+			</div>
+			<div class="acces-preloader__text text-pre">
+				Data we collect automatically.
+			</div>
+			<div class="acces-preloader__text text-pre">
+				Data about your account and game progress <br>
+				Your IP address and mobile device identifiers (such as your device ID, advertising ID, MAC address, IMEI)
+				<br>
+				Data about your device, such as device name and operating system, browser type and language <br>
+				Data we collect with cookie and similar technology (see more below) <br>
+				General location data <br>
+				Precise geolocation data (GPS, with your consent) <br>
+				Data about your use of the Service, such as gameplay data and your interactions with other players inside
+				the Service <br>
+				In most cases, we also create a specific ID for you when you use the Service <br>
+			</div>
+			<div class="acces-preloader__text text-pre">
+				How do we use your information? <br>
+				We may use the information we collect from you when you register, sign up for our newsletter, respond to a
+				survey or marketing communication, surf the website, or use certain other site features in the following
+				ways: to quickly process your requests. <br>
+				How do we protect your information? <br>
+				We do not use vulnerability scanning and/or scanning to PCI standards. We only provide articles and
+				information. Not only that, but we never ask for credit card numbers. Likewise, we do not use Malware
+				Scanning. We do not use an SSL certificate. Furthermore, we do not need an SSL because: it is android
+				application <br>
+				Do we use 'cookies'? <br>
+				Like most online services, our partners, and we use cookie and similar technology to provide and personalize
+				the Service, analyze use, target advertisements and prevent fraud. <br>
+				You can choose to have your computer warn you each time a cookie is being sent, or you can choose to turn
+				off all cookies. You do this through your browser settings. Since the browser is a little different, look at
+				your browser's Help Menu to learn the correct way to modify your cookies. <br>
+				If you turn cookies off, Some of the features that make your site experience more efficient may not function
+				properly. That make your site experience more efficient and may not function properly. <br>
+				Third-party disclosure <br>
+				We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information.
+				<br>
+				Google <br>
+				Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place
+				to provide a positive experience for users. <a target="_blank" href="https://support.google.com/adwordspolicy/answer/1316548?hl=en">https://support.google.com/adwordspolicy/answer/1316548?hl=en</a>
+				<br>
+				We have not enabled Google AdSense on our app, but we may do so in the future. <br>
+				How does our site handle Do Not Track signals? <br>
+				We honor Do Not Track signals and Do Not Track, plant cookies, or use advertising when a Do Not Track (DNT)
+				browser mechanism is in place. <br>
+				Fair Information Practices <br>
+				The Fair Information Practices Principles form the backbone of privacy law in the United States, and the
+				concepts they include have played a significant role in the development of data protection laws around the
+				globe. Understanding the Fair Information Practice Principles and how they should be implemented is critical
+				to comply with the various privacy laws that protect personal information.
+			</div>
+		</div>
+		<button type="button" class="preloader__button button">
+			<p>Start</p>
+		</button>
+	</div>
+	<div class="wrapper">
+		<div class="wrapper__game game">
+			<div class="game__body">
+				<a href="index.html" class="game__button-back button-back"></a>
+				<div class="game__field field">
+					<div class="field__body">
+						<picture><source srcset="img/other/snake-2.webp" type="image/webp"><img src="img/other/snake-2.png" alt="Image"></picture>
+						<div class="field__pins pin pin_5">x1</div>
+						<div class="field__pins pin pin_6">x1.5</div>
+						<div class="field__pins pin pin_7">x2.2</div>
+						<div class="field__pins pin pin_8">x3.2</div>
+						<div class="field__pins pin pin_9">x3.8</div>
+						<div class="field__pins pin pin_10">x50</div>
+						<div data-number="1" class="field__pin field__pin_1"></div>
+						<div data-number="2" class="field__pin field__pin_2"></div>
+						<div data-number="3" class="field__pin field__pin_3"></div>
+						<div data-number="4" class="field__pin field__pin_4"></div>
+						<div data-number="5" data-bonus="1" class="field__pin field__pin_5"></div>
+						<div data-number="6" class="field__pin field__pin_6"></div>
+						<div data-number="7" class="field__pin field__pin_7"></div>
+						<div data-number="8" class="field__pin field__pin_8"></div>
+						<div data-number="9" class="field__pin field__pin_9"></div>
+						<div data-number="10" class="field__pin field__pin_10"></div>
+						<div data-number="11" class="field__pin field__pin_11"></div>
+						<div data-number="12" data-bonus="1.5" class="field__pin field__pin_12"></div>
+						<div data-number="13" class="field__pin field__pin_13"></div>
+						<div data-number="14" class="field__pin field__pin_14"></div>
+						<div data-number="15" class="field__pin field__pin_15"></div>
+						<div data-number="16" data-bonus="2.2" class="field__pin field__pin_16"></div>
+						<div data-number="17" class="field__pin field__pin_17"></div>
+						<div data-number="18" class="field__pin field__pin_18"></div>
+						<div data-number="19" class="field__pin field__pin_19"></div>
+						<div data-number="20" data-bonus="3.2" class="field__pin field__pin_20"></div>
+						<div data-number="21" class="field__pin field__pin_21"></div>
+						<div data-number="22" class="field__pin field__pin_22"></div>
+						<div data-number="23" class="field__pin field__pin_23"></div>
+						<div data-number="24" class="field__pin field__pin_24"></div>
+						<div data-number="25" data-bonus="3.8" class="field__pin field__pin_25"></div>
+						<div data-number="26" class="field__pin field__pin_26"></div>
+						<div data-number="27" class="field__pin field__pin_27"></div>
+						<div data-number="28" class="field__pin field__pin_28"></div>
+						<div data-number="29" class="field__pin field__pin_29"></div>
+						<div data-number="30" class="field__pin field__pin_30"></div>
+						<div data-number="31" class="field__pin field__pin_31"></div>
+						<div data-number="32" class="field__pin field__pin_32"></div>
+						<div data-number="33" data-bonus="50" class="field__pin field__pin_33"></div>
+						<div class="field__chip field__chip_green"></div>
+						<div class="field__chip field__chip_blue"></div>
+					</div>
+				</div>
+				<div class="game__item item-game">
+					<div class="item-game__body">
+						<div class="item-game__cub">
+							<picture><source srcset="img/icons/cub-1.webp" type="image/webp"><img src="img/icons/cub-1.png" alt="Icon"></picture>
+						</div>
+					</div>
+				</div>
+				<div class="game__chip chip-game">
+					<div class="chip-game__circle"></div>
+					<div class="chip-game__info"></div>
+				</div>
+				<div class="game__info info-game">
+					<div class="info-game__body">
+						<div class="info-game__text">
+							The enemy got into quicksand. Skipping a move
+						</div>
+					</div>
+				</div>
+				<div class="game__balance balance">
+					<div class="balance__body">
+						<div class="balance__item">
+							<div class="balance__title">bet</div>
+							<div class="balance__block-bet block-bet">
+								<div class="block-bet__controls">
+									<div class="block-bet__minus">-</div>
+									<div class="block-bet__bet">
+										<div class="block-bet__coins">50</div>
+										<div class="block-bet__icon icon-anim">
+											<picture><source srcset="img/icons/cherry.webp" type="image/webp"><img src="img/icons/cherry.png" alt="Icon"></picture>
+										</div>
+									</div>
+									<div class="block-bet__plus">+</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="balance__button button-balance">
+							<div class="button-balance__body"></div>
+						</div>
+						<div class="balance__item">
+							<div class="balance__title">balance</div>
+							<div class="balance__money money">
+								<div class="money__body">
+									<div class="money__coins check">5000</div>
+									<div class="money__icon icon-anim">
+										<picture><source srcset="img/icons/cherry.webp" type="image/webp"><img src="img/icons/cherry.png" alt="Icon"></picture>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper__win win">
+			<div class="win__sub-text">You Win!</div>
+			<div class="win__text">0</div>
+			<div class="win__body">
+				<button type="button" class="win__button button">
+					<p>Play again</p>
+				</button>
+			</div>
+		</div>
+		<div class="wrapper__loose loose">
+			<div class="loose__sub-text">You Loose!</div>
+			<div class="loose__body">
+				<button type="button" class="loose__button button">
+					<p>Play again</p>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220514122849"></script>
+</body>
+
+</html>
