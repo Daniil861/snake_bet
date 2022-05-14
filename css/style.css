@@ -1626,13 +1626,13 @@ body._hold {
   left: 3.25rem;
   background: url("../img/icons/chip-blue.png") center/18px 37px no-repeat;
 }
-@media (min-height: 21.875em) {
+@media (min-height: 18.75em) {
   .field__chip_blue {
     top: 15.625rem;
     left: 3.875rem;
   }
 }
-@media (min-height: 25em) {
+@media (min-height: 20.625em) {
   .field__chip_blue {
     top: 18.4375rem;
     left: 5.125rem;
@@ -1773,7 +1773,7 @@ body._hold {
 .button-balance__body._bot::before {
   width: 2rem;
   height: 2rem;
-  background: rgba(196, 196, 196, 0.5);
+  background: rgba(196, 196, 196, 0.5) !important;
   border-radius: 5px;
   transform: translate(-50%, -50%);
 }
